@@ -11,10 +11,10 @@ export async function middleware(req: NextRequest, ev: NextFetchEvent) {
   
   const slug = req.nextUrl.pathname.split("/").pop()
 
-  if (slug?.includes(["webpack.js", "main.js", "_app.js", "_buildManifest.js", "_ssgManifest.js", "_error.js", "react-refresh.js", "_devMiddlewareManifest.json"])) {
+  // if (slug?. (["webpack.js", "main.js", "_app.js", "_buildManifest.js", "_ssgManifest.js", "_error.js", "react-refresh.js", "_devMiddlewareManifest.json"])) {
      
-    return 
-  }
+  //   return 
+  // }
 
   const data = await (await fetch(`${req.nextUrl.origin}/api/get-url/${slug}`)) .json()
 
