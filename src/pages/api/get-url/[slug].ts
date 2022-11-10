@@ -22,9 +22,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     if (!data) {
         res.statusCode = 404
 
-        res.setHeader("Content-Type", "application/json")
-        res.setHeader("Access-Control-Allow-Origin", "*")
-        res.setHeader("Cache-Control", "s-maxage=10000000, stale-while-revalidate")
+        
         
 
         res.send(JSON.stringify({ message: "Slug not found" }));
@@ -33,5 +31,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         return 
     }
 
+
+    res.setHeader("Content-Type", "application/json")
+    res.setHeader("Access-Control-Allow-Origin", "*")
+    res.setHeader("Cache-Control", "s-maxage=10000000, stale-while-revalidate")
+    
     return res.json(data)
 }

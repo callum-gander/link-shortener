@@ -1,26 +1,10 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.neon {
+    color: #baf4ff;
+    text-shadow: 0 0 5px #baf4ff, 0 0 10px #baf4ff, 0 0 20px #baf4ff,
+        0 0 40px #136fef, 0 0 80px #136fef, 0 0 90px #136fef, 0 0 100px #136fef,
+        0 0 150px #136fef;
 }
